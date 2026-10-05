@@ -110,3 +110,16 @@ RESULT: PARITY — both implementations agree
 
 Nếu dùng PowerShell, ghi lệnh tương đương và output thực tế theo [SUBMISSION.md](../docs/SUBMISSION.md).
 Nếu làm bonus, thêm output B1 hoặc đường dẫn bằng chứng B2 ở cuối phần này.
+
+```text
+$ make bonus-llm
+=== bonus: LLM labelling of 11 live tickets ===
+  cost estimate before running: ~484 tokens = $0.0010 per full run
+  [OK ] first run labels every live ticket
+  [OK ] re-run with same model + prompt makes 0 LLM calls
+  [OK ] every Gold label is bug / billing / other
+  [OK ] off-schema answers go to llm_label_quarantine
+  [OK ] new prompt version re-labels on purpose
+  [OK ] labels carry their prompt version
+BONUS PASS
+```
