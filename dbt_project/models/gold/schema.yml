@@ -5,8 +5,7 @@ models:
     description: Routing-agent features, one row per user per event day.
     data_tests:
       - dbt_utils_free_unique_combination:
-          arguments:
-            columns: [user_id, event_date]
+          columns: [user_id, event_date]
     columns:
       - name: user_id
         data_tests: [not_null]

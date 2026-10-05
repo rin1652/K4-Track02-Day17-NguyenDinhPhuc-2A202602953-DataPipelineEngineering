@@ -3,7 +3,8 @@
 -- `lookback` days, so events that arrive late still land in their own day.
 -- lookback = 3 = ceil(P99 lateness) measured from Bronze (python main.py --lateness).
 {{ config(
-    incremental_strategy='microbatch',
+    incremental_strategy='delete+insert',
+    unique_key=['user_id', 'event_date'],
     event_time='event_date',
     batch_size='day',
     lookback=3,

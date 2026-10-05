@@ -2,8 +2,7 @@
 -- The dbt twin of pipeline/silver.py::upsert_silver_tickets.
 {{ config(
     unique_key='ticket_id',
-    incremental_strategy='merge',
-    merge_update_condition='DBT_INTERNAL_SOURCE._lsn > DBT_INTERNAL_DEST._lsn',
+    incremental_strategy='delete+insert',
     on_schema_change='fail'
 ) }}
 

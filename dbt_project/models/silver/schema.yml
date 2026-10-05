@@ -20,20 +20,17 @@ models:
         data_type: varchar
         data_tests:
           - accepted_values:
-              arguments:
-                values: ['low', 'medium', 'high']
+              values: ['low', 'medium', 'high']
       - name: status
         data_type: varchar
         data_tests:
           - accepted_values:
-              arguments:
-                values: ['open', 'pending', 'closed']
+              values: ['open', 'pending', 'closed']
       - name: category
         data_type: varchar
         data_tests:
           - accepted_values:
-              arguments:
-                values: ['bug', 'billing', 'other']
+              values: ['bug', 'billing', 'other']
       - name: created_at
         data_type: timestamp
       - name: updated_at
